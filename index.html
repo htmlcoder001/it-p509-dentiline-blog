@@ -193,74 +193,14 @@ a:visited,
         </style>
         
         <!-- Header -->
-        <style id="font-faces">
-            @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 400;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-regular-webfont.woff2") format("woff2");url("fonts/agaramondpro-regular-webfont.woff") format("woff");
-            }
-    
-            @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-bold-webfont.woff2") format("woff2");url("fonts/agaramondpro-bold-webfont.woff") format("woff");
-            }
-    
-            @font-face {
-                font-family: GaramondPremierPro;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/agaramondpro-semibold-webfont.woff2") format("woff2");url("fonts/agaramondpro-semibold-webfont.woff") format("woff");
-            }
-            
-            @font-face {
-                font-family: FBDidotS;
-                font-weight: 300;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/FBDidotS-Light.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 700;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-Bold.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 600;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-DemiBold.woff") format("woff");
-            }
-        
-            @font-face {
-                font-family: VogueAvantGarde;
-                font-weight: 500;
-                font-style: normal;
-                font-display: swap;
-                src: url("fonts/VogueAvantGarde-Medium.woff") format("woff");
-            }
-        </style>
+        <link rel="stylesheet" id="google-raleway-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800" type="text/css" media="all">
     
         <style>
-            .site-content {
-                border-left: 1px solid #999;
-                border-right: 1px solid #999;
-                padding-top: 48px;
-            }
             header {
                 position: relative;
                 z-index: 50;
                 background-color: #fff;
+                margin-bottom: 48px;
             }
             header:before {
                 content: '';
@@ -273,400 +213,187 @@ a:visited,
                 width: 100%;
             }
             .header-top {
-                height: 50px;
+                padding-top: 8px;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
-                max-width: 960px;
-                margin: 0 auto;
-                position: relative;
-            }
-            .header-top__actions {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .header-actions__item {
-                display: flex;
-                align-items: center;
+                flex-direction: column;
                 justify-content: center;
-                gap: 4px;
-                text-transform: uppercase;
-                color: #000000;
-                padding: 0 16px;
+                align-items: center;
                 position: relative;
-                font-size: 14px;
-                font-family: sans-serif!important;
-                text-decoration: none;
+                background-color: rgb(237,237,237);
+                padding-bottom: 8px;
             }
+            .header-top__line {
+                max-width: 1180px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+            .header-top__contacts {
+                display: block;
+                width: 445px;
+                height: 21px;
+                background-image: url(images/header-contacts.png);
+                -webkit-background-size: contain;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .header-top__socials {
+                display: block;
+                height: 26px;
+                width: 120px;
+                background-image: url(images/header-socials.png);
+                -webkit-background-size: contain;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            
             .header-actions__item svg {
                 width: 20px;
                 height: 20px;
                 margin-top: 4px;
             }
-            .header-actions__item:last-child {
-                padding-right: 0;
-            }
-            .header-actions__item:first-child {
-                padding-left: 0;
-            }
-            .header-actions__item:after {
-                content: '|';
-                display: block;
-                position: absolute;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
-                transform: translateY(-50%);
-                right: 0;
-                color: #000000;
-            }
-            .header-actions__item:last-child:after {
-                display: none;
-            }
+            
             .header-top__logo img {
-                width: 138px;
-                height: 28px;
+                width: 280px;
             }
             .header-top__logo {
-                position: absolute;
-                left: 50%;
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                -o-transform: translateX(-50%);
-                transform: translateX(-50%);
+                display: block;
+                margin: 16px auto 0 auto;
             }
         
-            .header-top__buttons {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .header-buttons__item {
-                text-transform: uppercase;
-                color: #000000;
-                font-family: sans-serif!important;
-                font-size: 12px!important;
-                text-decoration: none;
-                padding: 0 16px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 4px;
-                white-space: nowrap;
-                position: relative;
-            }
-            .header-buttons__item:after {
-                content: '|';
-                display: block;
-                position: absolute;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
-                transform: translateY(-50%);
-                right: 0;
-                color: #000000;
-            }
-            .header-buttons__item:last-child:after {
-                display: none;
-            }
-            .header-buttons__item:last-child {
-                padding-right: 0;
-            }
-            .--icon-button svg {
-                width: 20px;
-                height: 20px;
-            }
-            .--account-button svg {
-                width: 24px;
-                height: 24px;
-            }
-            .header-main {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                max-width: 960px;
-                margin: 0 auto;
-                height: 110px;
-                position: relative;
-            }
-            .header-main svg {
             
-            }
-            .header-main__logotype {
-                position: absolute;
-                left: 50%;
-                -webkit-transform: translateX(-50%);
-                -moz-transform: translateX(-50%);
-                -ms-transform: translateX(-50%);
-                -o-transform: translateX(-50%);
-                transform: translateX(-50%);
-            }
-            .header-main__social {
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                gap: 8px;
-            }
-            .header-social__text {
-                font-family: 'Eugenio Sans Text','Helvetica Neue',Helvetica,sans-serif!important;
-                font-size: 13px!important;
-                line-height: 2.2;
-            }
-            .header-social__item {
-            
-            }
-            .header-social__item svg {
-                width: 20px;
-                max-height: 30px;
-            
-                -webkit-transform: none;
-                -moz-transform: none;
-                -ms-transform: none;
-                -o-transform: none;
-                transform: none;
-                left: auto;
-                position: relative;
-            }
-            .header-main__search {
-                color: #616161;
-                background: #fff;
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                padding-right: 55px;
-                border: 1px solid #dedede;
-                border-radius: 3px;
-                -webkit-transition: .1s ease;
-                -o-transition: .1s ease;
-                transition: .1s ease;
-                width: 220px;
-                position: relative;
-                height: 35px;
-                display: block;
-                font-size: 12px;
-                letter-spacing: .03em;
-                -webkit-box-sizing: border-box!important;
-                -moz-box-sizing: border-box!important;
-                box-sizing: border-box!important;
-                padding-left: 10px;
-                font-family: sans-serif!important;
-            }
-            .header-main svg.search-icon {
-                width: 18px;
-                height: 18px;
-                position: absolute;
-                right: 8px;
-                top: 50%;
-                -webkit-transform: translateY(-50%);
-                -moz-transform: translateY(-50%);
-                -ms-transform: translateY(-50%);
-                -o-transform: translateY(-50%);
-                transform: translateY(-50%);
-                z-index: 2;
-                left: auto;
-            }
             .header-nav__link {
                 padding-left: 12px;
                 padding-right: 12px;
                 text-transform: uppercase;
-                color: #1a1a1a;
                 display: flex;
                 height: 40px;
                 align-items: center;
                 justify-content: center;
-                font-family: sans-serif!important;
+                font-family: 'Open Sans', sans-serif!important;
                 text-decoration: none;
+                color: rgb(77,77,77);
+                font-size: 14px;
+                font-weight: 700;
+                white-space: nowrap;
             }
             .header-nav__ul {
-                margin: 0;
+                max-width: 1100px;
+                margin: 0 auto;
                 padding: 0;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                align-items: stretch;
             }
             .header-nav__li {
                 list-style: none;
                 font-size: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -ms-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                height: 56px;
+            }
+            .header-nav__li:not(:last-child) {
+                border-right: 1px solid #ffffff;
+            }
+            .header-nav__li:hover,
+            .header-nav__li.--active-link {
+                background-color: #dd0017;
+                
+            }
+            .header-nav__li:hover .header-nav__link,
+            .header-nav__li.--active-link .header-nav__link {
+                color: #FFFFFF;
             }
             .header-nav {
-                max-width: 960px;
-                margin: 0 auto;
-                border: 1px solid #999;
+                width: 100%;
+                background-color: #d9d9d9;
+            }
+            
+            .webt-mobile-toggle {
+                display: none;
+    
+                flex-direction: column;
+                gap: 4px;
+            }
+            .webt-mobile-toggle span {
+                height: 2px;
+                width: 24px;
+                background-color: #777777;
+            }
+            
+        
+            @media (min-width: 1180px) {
+
             }
         
-            @media (min-width: 1200px) {
-                .header-top,
-                .header-main,
-                .header-nav {
-                    max-width: 1190px;
-                }
-                .header-nav__li {
-                    font-size: 12px;
-                }
-            }
-        
-            @media (max-width: 990px) {
-                .header-nav {
-                    max-width: 720px;
-                    white-space: nowrap;
-                    overflow-x: scroll;
-                }
-                .header-top,
-                .header-main {
-                    padding-right: 12px;
-                    padding-left: 12px;
-                }
-                .header-main svg.search-icon {
-                    right: 20px;
-                }
-            }
-        
-            @media (max-width: 768px) {
-                .header-buttons__item,
-                .header-main__search,
-                .header-main__social,
-                .header-main svg.search-icon {
+            @media (max-width: 960px) {
+                .header-nav,
+                .header-top__line {
                     display: none;
                 }
-                .header-buttons__item:nth-child(3) {
+                .webt-mobile-toggle {
                     display: flex;
                 }
-                .header-buttons__item:last-child {
-                    display: flex;
-                    font-size: 0;
-                    gap: 0;
-                    padding-left: 12px;
+                .header-top {
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 12px;
                 }
-                .header-main svg {
-                    height: 35px;
-                }
-                .header-main {
-                    height: 70px;
-                }
-                .content-box {
-                    max-width: calc(100% - 22px);
-                    margin: 0 auto;
-                }
-                .header-nav {
-                    max-width: 100%;
-                    margin: 0 auto;
-                }
-            }
-        
-            @media (max-width: 525px) {
-                .header-actions__item {
-                    font-size: 0;
-                    gap: 0;
-                }
-                .header-actions__item:after {
-                    font-size: 12px;
-                }
-            }
-        
-            @media (max-width: 375px) {
-                .header-main svg {
-                    height: 30px;
-                }
-                .header-main {
-                    height: 50px;
+                .header-top__logo {
+                    margin: 0;
                 }
                 .header-top__logo img {
-                    max-width: 138px;
-                    width: 100%;
-                    height: 20px;
-                    object-fit: contain;
-                }
-                .header-buttons__item:nth-child(3) {
-                    display: none;
+                    width: 180px;
                 }
             }
         </style>
         <header>
             <div class="header-top">
-                <div class="header-top__actions">
-                    <a href="#roulette" class="header-actions__item">
-                        <svg><use href="#r-icon-menu"></use></svg>
-                        Menu
-                    </a>
-                    <a href="#roulette" class="header-actions__item">
-                        <svg><use href="#r-icon-search"></use></svg>
-                        Cerca
-                    </a>
+                <div class="header-top__line">
+                    <a href="#roulette" class="header-top__contacts"></a>
+                    <a href="#roulette" class="header-top__socials"></a>
                 </div>
                 <a href="#roulette" class="header-top__logo">
-                    <img src="images/top-logo.png" alt="">
+                    <img src="images/header-top-logo.webp" alt="" class="header-logo__img">
                 </a>
-                <div class="header-top__buttons">
-                    <a href="#roulette" class="header-buttons__item">Abbonati</a>
-                    <a href="#roulette" class="header-buttons__item">Gedi smile</a>
-                    <a href="#roulette" class="header-buttons__item --icon-button">
-                        <svg class="r-premium-logo">
-                            <use href="#r-premium"></use>
-                        </svg>
-                    </a>
-                    <a href="#roulette" class="header-buttons__item --account-button">
-                        Accedi
-                        <svg class="social-icon-user"><use xlink:href="#social-icon-user"></use></svg>
-                    </a>
-                </div>
-            </div>
-            <div class="header-main">
-                <div class="header-main__social">
-                    <span class="header-social__text">Seguici su:</span>
-                    <a href="#roulette" class="header-social__item">
-                        <svg><use href="#social-icon-facebook"></use></svg>
-                    </a>
-                    <a href="#roulette" class="header-social__item">
-                        <svg><use href="#social-icon-instagram"></use></svg>
-                    </a>
-                </div>
-                <a href="#roulette" class="header-main__logotype">
-                    <svg width="225px" height="50px">
-                        <use href="#r-logo-salute"></use>
-                    </svg>
+                <a href="#roulette" class="webt-mobile-toggle">
+                    <span></span><span></span><span></span>
                 </a>
-                <input type="search" placeholder="CERCA" class="header-main__search">
-                <svg class="search-icon">
-                    <use href="#r-icon-search"></use>
-                </svg>
             </div>
             <nav class="header-nav">
                 <ul class="header-nav__ul">
                     <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">Festival di Salute 2022</a>
+                        <a href="#roulette" class="header-nav__link">CURA DEI CAPELLI</a>
                     </li>
                     <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">COVID</a>
+                        <a href="#roulette" class="header-nav__link">CURA DEL VISO</a>
+                    </li>
+                    <li class="header-nav__li --active-link">
+                        <a href="#roulette" class="header-nav__link ">CURA DEL CORPO</a>
                     </li>
                     <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">Sportello Cuore</a>
+                        <a href="#roulette" class="header-nav__link">TENDENZE</a>
                     </li>
                     <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">TUMORI</a>
+                        <a href="#roulette" class="header-nav__link">L’ESPERTO CONSIGLIA</a>
                     </li>
                     <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">PSICOLOGIA</a>
+                        <a href="#roulette" class="header-nav__link">NOVITA’ PRODOTTI</a>
                     </li>
                     <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">ALIMENTAZIONE</a>
-                    </li>
-                    <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">LONGFORM</a>
-                    </li>
-                    <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">VIDEO</a>
-                    </li>
-                    <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">PODCAST</a>
-                    </li>
-                    <li class="header-nav__li">
-                        <a href="#roulette" class="header-nav__link">SCRIVICI</a>
+                        <a href="#roulette" class="header-nav__link">SHOP</a>
                     </li>
                 </ul>
             </nav>
@@ -1465,10 +1192,95 @@ a:visited,
                 </div>
                 <aside id="js_sidebar" class="widget-area" itemscope itemtype="http://schema.org/WPSideBar">
                     <div class="sticky-sidebar js-sticky-sidebar">
-                        <div id="wpshop_widget_articles-9" class="widget widget_wpshop_widget_articles">
+                        <style>
+                            .webt-aside {
+                            
+                            }
+                            .webt-aside__input {
+                                border: 2px solid #dcdee4!important;
+                                font-family: open sans,sans-serif,arial!important;
+                                background-color: #fff;
+                                height: 46px;
+                                width: 260px;
+    
+                                margin-bottom: 48px;
+                            }
+                            .webt-aside__recents {
+                            
+                            }
+                            .webt-recents__title {
+                                font-family: open sans,sans-serif,arial!important;
+                                font-size: 24px;
+                                color: #d9d9d9;
+                                font-weight: 400;
+                                margin-bottom: 16px;
+                            }
+                            .webt-recents__item {
+                                font-family: open sans,sans-serif,arial!important;
+                                font-size: 13px;
+                                color: #dd0017;
+                                position: relative;
+                                display: block;
+                                padding: 10px 15px;
+                                text-decoration: none;
+                            }
+                            .webt-aside__ads {
+                                display: block;
+                                margin: 24px auto;
+                            }
+                            .webt-ads__img {
+                            
+                            }
+                            .webt-aside__categories {
+                            
+                            }
+                            .webt-categories__title {
+                                font-family: open sans,sans-serif,arial!important;
+                                font-size: 24px;
+                                color: #d9d9d9;
+                                font-weight: 400;
+                                margin-bottom: 16px;
+                            }
+                        </style>
+                        <div class="webt-aside">
+                            <input type="text" class="webt-aside__input" placeholder="Cerca nel blog...">
+                            
+                            <div class="webt-aside__recents">
+                                <h3 class="webt-recents__title">ARTICOLI RECENTI</h3>
+                                <a href="#roulette" class="webt-recents__item">Barba ducktail: la barba vichinga che conquista tutti</a>
+                                <a href="#roulette" class="webt-recents__item">Trattamento Olaplex: quali prodotti scegliere e come usarli</a>
+                                <a href="#roulette" class="webt-recents__item">Come usare Olaplex 3 e dove comprarlo</a>
+                                <a href="#roulette" class="webt-recents__item">Come stimolare la crescita della barba</a>
+                                <a href="#roulette" class="webt-recents__item">Le fiale anticaduta più efficaci: guida all’acquisto</a>
+                            </div>
+    
+                            <a href="#roulette" class="webt-aside__ads">
+                                <img src="images/img-ads-1.webp" alt="" class="webt-ads__img">
+                            </a>
+    
+                            <div class="webt-aside__categories">
+                                <h3 class="webt-categories__title">CATEGORIE</h3>
+                                <a href="#roulette" class="webt-recents__item">ANGOLO DELL'ESPERTO</a>
+                                <a href="#roulette" class="webt-recents__item">CURA DEI CAPELLI</a>
+                                <a href="#roulette" class="webt-recents__item">CURA DEL CORPO</a>
+                                <a href="#roulette" class="webt-recents__item">CURA DEL VISO</a>
+                                <a href="#roulette" class="webt-recents__item">PRODOTTI</a>
+                                <a href="#roulette" class="webt-recents__item">TENDENZE</a>
+                            </div>
+    
+                            <a href="#roulette" class="webt-aside__ads">
+                                <img src="images/img-ads-2.webp" alt="" class="webt-ads__img">
+                            </a>
+    
+                            <a href="#roulette" class="webt-aside__ads">
+                                <img src="images/img-ads-3.webp" alt="" class="webt-ads__img">
+                            </a>
+                        </div>
+                        
+                        <!--<div id="wpshop_widget_articles-9" class="widget widget_wpshop_widget_articles">
                             <div class="widget-header">Registrazioni fresche</div>
                             <div class="widget-articles">
-                                <article class="post-card post-card--vertical">
+                                <article class="post-card post-card&#45;&#45;vertical">
                                     <div class="post-card__thumbnail">
                                         <a href="#roulette" class="scrollto">
                                             <picture>
@@ -1486,7 +1298,7 @@ a:visited,
                                         </div>
                                     </div>
                                 </article>
-                                <article class="post-card post-card--vertical">
+                                <article class="post-card post-card&#45;&#45;vertical">
                                     <div class="post-card__thumbnail">
                                         <a href="#roulette" class="scrollto">
                                             <picture>
@@ -1504,7 +1316,7 @@ a:visited,
                                         </div>
                                     </div>
                                 </article>
-                                <article class="post-card post-card--vertical">
+                                <article class="post-card post-card&#45;&#45;vertical">
                                     <div class="post-card__thumbnail">
                                         <a href="#roulette" class="scrollto">
                                             <picture>
@@ -1522,7 +1334,7 @@ a:visited,
                                         </div>
                                     </div>
                                 </article>
-                                <article class="post-card post-card--vertical">
+                                <article class="post-card post-card&#45;&#45;vertical">
                                     <div class="post-card__thumbnail">
                                         <a href="#roulette" class="scrollto">
                                             <picture>
@@ -1544,7 +1356,7 @@ a:visited,
                         </div>
                         <div id="custom_html-8" class="widget_text widget widget_custom_html">
                             <div class="textwidget custom-html-widget"></div>
-                        </div>
+                        </div>-->
                     </div>
                 </aside>
             </div>
